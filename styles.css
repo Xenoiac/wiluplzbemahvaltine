@@ -1,0 +1,118 @@
+/* Global styles and custom cursor */
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background: url('background.png') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    cursor: url('heart-cursor.png') 16 16, auto;
+}
+
+/* Main container styling */
+.container {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* New fade-out keyframes */
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-20px); }
+}
+
+/* Helper classes for transitions */
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Pepe avatar styling */
+.pepe {
+    width: 200px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Universal button styling */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff8f81;
+}
+
+/* Option containers: hidden by default */
+.optionContainer {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    max-width: 600px;
+    animation: optionFadeIn 1.5s ease-out;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animation for option containers */
+@keyframes optionFadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Option title, image, and text styling */
+.optionTitle {
+    margin-bottom: 20px;
+    color: #d6336c;
+}
+
+.optionImage {
+    width: 250px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.optionText {
+    margin-bottom: 20px;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* Hide the audio element */
+audio {
+    display: none;
+}

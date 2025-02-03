@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Valentine?</title>
+  <!-- Load the pixel font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Main container with the welcome question -->
+  <div class="container" id="mainContent">
+    <h1 id="question">Hi, Raghad ..</h1>
+    <img id="avatar" src="pepe_flower.png" alt="Pepe Avatar" class="pepe" />
+    <p id="message">I've missed you, how are you?</p>
+    <div class="buttons" id="mainButtons">
+      <!-- Option buttons for different customized responses -->
+      <button class="optionBtn" data-option="next">Okay</button>
+      <button class="optionBtn" data-option="next">....</button>
+    </div>
+  </div>
+
+  <!-- Option container: next -->
+  <div class="optionContainer" id="nextContainer">
+    <h2 class="optionTitle">I've been contemplating</h2>
+    <img src="pepe_thinking.jpg" alt="Romantic Image" class="optionImage" />
+    <p class="optionText">I like my time with you, you lighten up my day with your voice.</p>
+    <button class="optionBtn" data-option="nextnext">Okay?</button>
+    <button class="optionBtn" data-option="nextnext">....</button>
+  </div>
+
+  <!-- Option container: nextnext -->
+  <div class="optionContainer" id="nextnextContainer">
+    <h2 class="optionTitle">I'm done contemplating</h2>
+    <img src="swing.png" alt="Sweet Image" class="optionImage" />
+    <p class="optionText">Let's laugh, play, and create unforgettable memories together. Will you be my Valentine?</p>
+    <!-- Two options: Yes and No -->
+    <button class="optionBtn" data-option="yes">Yes</button>
+    <button class="optionBtn" data-option="areYouSure">No</button>
+  </div>
+
+  <!-- Option container: Playful (unchanged) -->
+  <div class="optionContainer" id="playfulContainer">
+    <h2 class="optionTitle">Playful Adventures</h2>
+    <img src="playful.png" alt="Playful Image" class="optionImage" />
+    <p class="optionText">Let's laugh, play, and create unforgettable memories together. Life is fun with you!</p>
+    <button class="backBtn">Back</button>
+  </div>
+
+  <!-- Final yes container -->
+  <div class="optionContainer" id="yesContainer">
+    <h2 class="optionTitle">Yes!</h2>
+    <img src="happy.png" alt="Happy Image" class="optionImage" />
+    <p class="optionText">I'm so happy you'll be my Valentine!</p>
+  </div>
+
+  <!-- Are You Sure container -->
+  <div class="optionContainer" id="areYouSureContainer">
+    <h2 class="optionTitle">Are you sure?</h2>
+    <img src="nerv_pepe.jpg" alt="Question Image" class="optionImage" />
+    <p class="optionText">I really hope you are not....</p>
+    <button class="optionBtn" data-option="yes">I'll be your Valentine</button>
+    <button class="optionBtn" data-option="goodbye">Goodbye</button>
+  </div>
+
+  <!-- Goodbye container -->
+  <div class="optionContainer" id="goodbyeContainer">
+    <h2 class="optionTitle">Goodbye</h2>
+    <img src="sad.jpg" alt="Goodbye Image" class="optionImage" />
+    <p class="optionText">It seems our paths diverge here.</p>
+  </div>
+
+  <!-- Background music (initially muted) -->
+  <audio id="bgMusic" src="music.mp3" autoplay loop muted></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
